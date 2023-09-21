@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/tabs/ahadeth_tab.dart';
+import 'package:islami_app/tabs/quran_tab.dart';
+import 'package:islami_app/tabs/radio_tab.dart';
+import 'package:islami_app/tabs/sebha_tab.dart';
+import 'package:islami_app/tabs/settings_tab.dart';
 
 import 'My_theme_data.dart';
 
@@ -57,8 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: MyThemeData.darkbg)
             ],
           ),
+          body: tabs[index],
         ),
       ],
     );
   }
+
+  List<Widget>tabs = [QuranTab(),SebhaTab(),AhadethTab(),RadioTab(),SettingsTab()];
 }
