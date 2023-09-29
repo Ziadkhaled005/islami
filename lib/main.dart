@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/sura_details.dart';
 import 'package:islami_app/tabs/ahadeth_tab.dart';
 import 'package:islami_app/tabs/quran_tab.dart';
 import 'package:islami_app/tabs/radio_tab.dart';
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
         AhadethTab.routeName: (context) => AhadethTab(),
         RadioTab.routeName: (context) => RadioTab(),
         SettingsTab.routeName:(context)=> SettingsTab(),
+        suraDetails.routeName:(context) => suraDetails(),
+
       },
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,

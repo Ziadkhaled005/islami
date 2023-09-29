@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: MyThemeData.darkbg),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage("assets/images/moshaf_blue.png")),
-                  label: "moshaf",
+                  label: "quran",
                   backgroundColor: MyThemeData.darkbg),
               BottomNavigationBarItem(icon: Icon(Icons.settings) , label: "settings",
                   backgroundColor: MyThemeData.darkbg)
@@ -68,5 +68,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget>tabs = [QuranTab(),SebhaTab(),AhadethTab(),RadioTab(),SettingsTab()];
+  List<Widget>tabs = [RadioTab(),SebhaTab(),AhadethTab(),QuranTab(),SettingsTab()];
 }
