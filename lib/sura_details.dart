@@ -22,7 +22,7 @@ class _suraDetailsState extends State<suraDetails> {
     }
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage("assets/images/background.png"),
             fit: BoxFit.fill),
@@ -36,13 +36,16 @@ class _suraDetailsState extends State<suraDetails> {
         ),
         body: Card(
           elevation: 1,
-          margin: EdgeInsets.all(15),
+          margin: const EdgeInsets.all(15),
           shape: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white)),
+              borderSide: const BorderSide(color: Colors.white)),
           child: ListView.separated(
-            separatorBuilder: (context, index) =>
-                Divider(thickness: 1, endIndent: 40, indent: 40 , color: MyThemeData.darkPrimary),
+            separatorBuilder: (context, index) => const Divider(
+                thickness: 1,
+                endIndent: 40,
+                indent: 40,
+                color: MyThemeData.darkPrimary),
             itemBuilder: (context, index) {
               return Directionality(
                   textDirection: TextDirection.rtl,
@@ -64,7 +67,6 @@ class _suraDetailsState extends State<suraDetails> {
   loadFile(int index) async {
     String sura = await rootBundle.loadString("assets/files/${index + 1}.txt");
     List<String> lines = sura.split("\n");
-    print(lines);
     verses = lines;
     setState(() {});
   }
