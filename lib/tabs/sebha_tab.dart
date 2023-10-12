@@ -9,8 +9,11 @@ class SebhaTab extends StatefulWidget {
 }
 
 class _SebhaTabState extends State<SebhaTab> {
+  List<String> tasbehat = ["الحمدلله", "الله اكبر", "سبحان الله"];
+
   String tasbeh = "سبحان الله";
-  int count = 0;
+  int tasbehcount = 0;
+  int tasbehIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +30,7 @@ class _SebhaTabState extends State<SebhaTab> {
                   margin: EdgeInsets.only(top: 70),
                   child: InkWell(
                       onTap: () {
-                        count++;
-
-                        setState(() {
-                          if (count == 34) {
-                            count = 0;
-                          }
-                        });
+                        addTesbehat(tasbehIndex);
                       },
                       child: Image.asset("assets/images/body_sebha_dark.png"))),
             ],
@@ -49,7 +46,7 @@ class _SebhaTabState extends State<SebhaTab> {
           SizedBox(
             height: 30,
           ),
-          Text("$count",
+          Text("$tasbehcount",
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
@@ -73,5 +70,18 @@ class _SebhaTabState extends State<SebhaTab> {
         ],
       ),
     );
+  }
+
+  void addTesbehat(index) {
+    tasbehcount++;
+    if (tasbehcount == 33) {
+      tasbeh = tasbehat[index];
+      tasbehcount = 0;
+      tasbehIndex++;
+    }
+    if (tasbehcount == 'الحمدلله') {
+      tasbehIndex = 0;
+    }
+    setState(() {});
   }
 }
