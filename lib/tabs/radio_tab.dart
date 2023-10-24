@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/My_theme_data.dart';
 
 class RadioTab extends StatelessWidget {
   static const String routeName = "RadioTab";
@@ -27,10 +26,11 @@ class RadioTab extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Icon(Icons.skip_previous,
-                  color: MyThemeData.darkPrimary, size: 50),
+                  color: Theme.of(context).colorScheme.background, size: 50),
               Icon(Icons.play_arrow_rounded,
-                  color: MyThemeData.darkPrimary, size: 70),
-              Icon(Icons.skip_next, color: MyThemeData.darkPrimary, size: 50),
+                  color: Theme.of(context).colorScheme.background, size: 70),
+              Icon(Icons.skip_next,
+                  color: Theme.of(context).colorScheme.background, size: 50),
             ],
           )
         ],

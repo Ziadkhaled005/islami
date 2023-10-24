@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/My_theme_data.dart';
 
 class SebhaTab extends StatefulWidget {
   static const String routeName = "SebhaTab";
@@ -20,14 +19,14 @@ class _SebhaTabState extends State<SebhaTab> {
     return Center(
       child: Column(
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Stack(
             children: [
               Container(
-                  margin: EdgeInsets.only(left: 95),
+                  margin: const EdgeInsets.only(left: 95),
                   child: Image.asset("assets/images/head_sebha_dark.png")),
               Container(
-                  margin: EdgeInsets.only(top: 70),
+                  margin: const EdgeInsets.only(top: 70),
                   child: InkWell(
                       onTap: () {
                         addTesbehat(tasbehIndex);
@@ -35,33 +34,33 @@ class _SebhaTabState extends State<SebhaTab> {
                       child: Image.asset("assets/images/body_sebha_dark.png"))),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Text("عدد التسبيحات",
+          const Text("عدد التسبيحات",
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
                   fontSize: 30)),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Text("$tasbehcount",
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
                   fontSize: 30)),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                  color: MyThemeData.darkPrimary,
+                  color: Theme.of(context).colorScheme.background,
                   borderRadius: BorderRadius.circular(30)),
               child: Text(
                 "$tasbeh",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF242424),
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
