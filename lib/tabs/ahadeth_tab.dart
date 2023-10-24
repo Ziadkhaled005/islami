@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_app/My_theme_data.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/hadeth_details.dart';
 import 'package:islami_app/hadeth_model.dart';
 
@@ -25,12 +25,12 @@ class _AhadethTabState extends State<AhadethTab> {
           Image.asset("assets/images/hadeth_logo.png"),
           Divider(
             thickness: 2,
-            color: MyThemeData.darkPrimary,
+            color: Theme.of(context).colorScheme.background,
           ),
-          Text("ahadeth"),
+          Text(AppLocalizations.of(context)!.ahadeth),
           Divider(
             thickness: 2,
-            color: MyThemeData.darkPrimary,
+            color: Theme.of(context).colorScheme.background,
           ),
           Expanded(
               child: ListView.builder(
